@@ -1,3 +1,5 @@
 - hosts: webservers
   roles:
     - { role: apache }
+  become: true
+  become_method: sudo
