@@ -1,0 +1,5 @@
+---
+ - name: Ensure Apache is installed on the node
+   yum:
+    name: httpd
+    state: present
