@@ -1,0 +1,11 @@
+---
+# file: task.yml
+- hosts: all
+  roles:
+    - nbz4live.php-fpm
+    - {
+        role: nbz4live.php-fpm,
+        php_fpm_pools:[
+          {name: www, user: nginx, group: nginx, listen: 9000, chdir: /}
+        ]
+      }
